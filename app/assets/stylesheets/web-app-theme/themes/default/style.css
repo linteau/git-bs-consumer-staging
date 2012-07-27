@@ -1,5 +1,13 @@
 /* Activo 2 by David Francisco (activo.dmfranc.com) - tiny version for web-app-theme */
 @font-face {
+    font-family: "Gotham-Bold";
+    src: url("fonts/Gotham-Bold.eot");
+    src: local("☺"), url("fonts/Gotham-Bold.woff") format("woff"), url("fonts/Gotham-Bold.ttf") format("truetype"), url("fonts/Gotham-Bold.svg#webfontzyxABCeD") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "MuseoSans500";
     src: url("fonts/museosans_500-webfont.eot");
     src: local("☺"), url("fonts/museosans_500-webfont.woff") format("woff"), url("fonts/museosans_500-webfont.ttf") format("truetype"), url("fonts/museosans_500-webfont.svg#webfontxgyHgdAL") format("svg");
@@ -31,8 +39,8 @@ body {
 
 h1, h2, h3 {
     color: #111111;
-    font-weight: normal;
-    font-family: "Museo700", helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-family: "Gotham-Bold", helvetica, arial, sans-serif;
 }
 
 a:link, a:visited, a:hover, a:active {
