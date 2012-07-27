@@ -15,10 +15,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: BuyStandConsumer_development
+  database: BuyStand_development
   pool: 5
-  username: BuyStandConsumer
-  password:
+  username: Ed
+  password: AZ7mad7max
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,15 +41,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: BuyStandConsumer_test
+  database: BuyStand_test
   pool: 5
-  username: BuyStandConsumer
-  password:
+  username: Ed
+  password: AZ7mad7max
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: BuyStandConsumer_production
+  database: BuyStand_production
   pool: 5
-  username: BuyStandConsumer
-  password:
+  username: Ed
+  password: AZ7mad7max

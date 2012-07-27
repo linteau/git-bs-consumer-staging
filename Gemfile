@@ -6,8 +6,17 @@ gem 'rails', '3.2.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'devise'
+gem 'kaminari'
 
 
+group :development, :test do
+	gem 'capybara'
+	gem 'rspec-rails'
+	gem 'hpricot'
+	gem 'ruby_parser'
+	gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
