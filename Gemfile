@@ -8,7 +8,7 @@ gem 'rails', '3.2.7'
 gem 'pg'
 gem 'devise'
 gem 'kaminari'
-
+gem 'omniauth-facebook'
 
 group :development, :test do
 	gem 'capybara'
