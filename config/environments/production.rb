@@ -1,4 +1,4 @@
-BuyStandPartner::Application.configure do
+BuyStandConsumer::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
