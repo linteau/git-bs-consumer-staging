@@ -5,6 +5,11 @@ BuyStandConsumer::Application.routes.draw do
 
 	root :to => "home#index"
 
+  # config/routes.rb
+  match '/auth/:provider/callback' => 'sessions#create'
+  match 'auth/*rest' => 'application#omniauth'
+  match '*uri' => 'posts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

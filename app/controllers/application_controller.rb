@@ -19,4 +19,9 @@ class ApplicationController < ActionController::Base
 
 		super
 	end
+
+	# app/controllers/application_controller.rb
+	def omniauth
+  		render text: 'Authentication', status: 404
+	end
 end
