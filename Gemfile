@@ -11,6 +11,8 @@ gem 'devise'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
+gem 'dalli'
+
 gem 'capybara'
 gem 'rspec-rails'
 gem 'hpricot'
