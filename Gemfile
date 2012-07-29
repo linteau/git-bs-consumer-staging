@@ -11,13 +11,12 @@ gem 'devise'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
-group :development, :test do
-	gem 'capybara'
-	gem 'rspec-rails'
-	gem 'hpricot'
-	gem 'ruby_parser'
-	gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
-end
+gem 'capybara'
+gem 'rspec-rails'
+gem 'hpricot'
+gem 'ruby_parser'
+gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
