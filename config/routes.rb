@@ -1,15 +1,7 @@
-BuyStandConsumer::Application.routes.draw do
-  devise_for :users
-
+BuyStandPartner::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
 	root :to => "home#index"
-
-  # config/routes.rb
-  match '/users/auth/:provider/callback' => 'sessions#create'
-  match '/auth/:provider/callback' => 'sessions#create'
-  match 'auth/*rest' => 'application#omniauth'
-  match '*uri' => 'posts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
