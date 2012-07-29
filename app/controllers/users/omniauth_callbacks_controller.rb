@@ -10,12 +10,5 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 			redirect_to new_user_registration_url
 		end
 	end
-	
-	# This is necessary since Rails 3.0.4
-	# See https://github.com/intridea/omniauth/issues/185
-	# and http://www.arailsdemo.com/posts/44
-	protected
-	def handle_unverified_request
-  		true
-	end
+
 end

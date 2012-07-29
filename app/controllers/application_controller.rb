@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :only => [:index]
 
 	private
 	def after_sign_out_path_for(resource_or_scope)
@@ -18,10 +18,5 @@ class ApplicationController < ActionController::Base
 		session.keys.grep(/^facebook\./).each { |k| session.delete(k) }
 
 		super
-	end
-
-	# app/controllers/application_controller.rb
-	def omniauth
-  		render text: 'Authentication', status: 404
 	end
 end
