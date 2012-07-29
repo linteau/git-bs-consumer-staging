@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: BuyStand_development
   pool: 5
-  username: Ed
+  username: postgres
   password: AZ7mad7max
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: BuyStand_test
   pool: 5
-  username: Ed
+  username: postgres
   password: AZ7mad7max
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: BuyStand_production
   pool: 5
-  username: Ed
+  username: postgres
   password: AZ7mad7max
