@@ -5,18 +5,18 @@ gem 'rails', '3.2.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'heroku'
 gem 'pg'
 gem 'devise'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
-gem 'capybara'
-gem 'rspec-rails'
-gem 'hpricot'
-gem 'ruby_parser'
-gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
-
+group :development, :test do
+	gem 'capybara'
+	gem 'rspec-rails'
+	gem 'hpricot'
+	gem 'ruby_parser'
+	gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
