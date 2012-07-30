@@ -7,6 +7,7 @@ gem 'rails', '3.2.7'
 
 gem 'pg'
 gem 'devise'
+gem 'devise-encryptable'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
