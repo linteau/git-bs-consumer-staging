@@ -11,6 +11,9 @@ gem 'devise-encryptable'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
+gem 'haml'
+gem 'haml-rails'
+
 group :development, :test do
 	gem 'capybara'
 	gem 'rspec-rails'
