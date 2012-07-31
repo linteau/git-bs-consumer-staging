@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title BUYSTAND.™ - Consumer
+    = stylesheet_link_tag 'web_app_theme'
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+  %body
+    #container
+      #header
+        %h1
+          %a{:href => "/"} BUYSTAND.™ - Consumer
+        #main-navigation
+          %ul.wat-cf
+      #box
+        = yield
+      #footer
+        .block
+          %p
+            Copyright © #{Time.now.year} BUYSTAND.™.
