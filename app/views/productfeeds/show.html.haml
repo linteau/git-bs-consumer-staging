@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Id:
+  = @productfeed.id
+%p
+  %b Link:
+  = @productfeed.link
+%p
+  %b Summary:
+  = @productfeed.summary
+%p
+  %b Title:
+  = @productfeed.title
+%p
+  %b Updated:
+  = @productfeed.updated
+
+= link_to 'Edit', edit_productfeed_path(@productfeed)
+\|
+= link_to 'Back', productfeeds_path

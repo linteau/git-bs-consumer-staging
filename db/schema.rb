@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730222541) do
+ActiveRecord::Schema.define(:version => 20120731202717) do
+
+  create_table "productfeeds", :force => true do |t|
+    t.string   "link"
+    t.text     "summary"
+    t.string   "title"
+    t.datetime "updated"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
