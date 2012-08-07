@@ -1,0 +1,43 @@
+%h1 Listing partners
+
+%table
+  %tr
+    %th Partner name
+    %th Website
+    %th Description
+    %th Title
+    %th Address1
+    %th Address2
+    %th City
+    %th State province
+    %th Postal code
+    %th Country
+    %th Phone1
+    %th Phone2
+    %th Tax
+    %th
+    %th
+    %th
+
+  - @partners.each do |partner|
+    %tr
+      %td= partner.partner_name
+      %td= partner.website
+      %td= partner.description
+      %td= partner.title
+      %td= partner.address1
+      %td= partner.address2
+      %td= partner.city
+      %td= partner.state_province
+      %td= partner.postal_code
+      %td= partner.country
+      %td= partner.phone1
+      %td= partner.phone2
+      %td= partner.tax_id
+      %td= link_to 'Show', partner
+      %td= link_to 'Edit', edit_partner_path(partner)
+      %td= link_to 'Destroy', partner, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Partner', new_partner_path

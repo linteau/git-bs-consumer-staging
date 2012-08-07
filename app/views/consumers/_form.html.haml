@@ -1,0 +1,58 @@
+= form_for @consumer do |f|
+  -if @consumer.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@consumer.errors.count, "error")} prohibited this consumer from being saved:"
+      %ul
+        - @consumer.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :middle_name
+    = f.text_field :middle_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :stripe_customer_id
+    = f.number_field :stripe_customer_id
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :address1
+    = f.text_field :address1
+  .field
+    = f.label :address2
+    = f.text_field :address2
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :state_province
+    = f.text_field :state_province
+  .field
+    = f.label :postal_code
+    = f.text_field :postal_code
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :phone1
+    = f.text_field :phone1
+  .field
+    = f.label :phone2
+    = f.text_field :phone2
+  .field
+    = f.label :email1
+    = f.text_field :email1
+  .field
+    = f.label :email2
+    = f.text_field :email2
+  .actions
+    = f.submit 'Save'

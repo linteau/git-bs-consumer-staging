@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @consumer.first_name
+%p
+  %b Middle name:
+  = @consumer.middle_name
+%p
+  %b Last name:
+  = @consumer.last_name
+%p
+  %b User:
+  = @consumer.user_id
+%p
+  %b Stripe customer:
+  = @consumer.stripe_customer_id
+%p
+  %b Title:
+  = @consumer.title
+%p
+  %b Address1:
+  = @consumer.address1
+%p
+  %b Address2:
+  = @consumer.address2
+%p
+  %b City:
+  = @consumer.city
+%p
+  %b State province:
+  = @consumer.state_province
+%p
+  %b Postal code:
+  = @consumer.postal_code
+%p
+  %b Country:
+  = @consumer.country
+%p
+  %b Phone1:
+  = @consumer.phone1
+%p
+  %b Phone2:
+  = @consumer.phone2
+%p
+  %b Email1:
+  = @consumer.email1
+%p
+  %b Email2:
+  = @consumer.email2
+
+= link_to 'Edit', edit_consumer_path(@consumer)
+\|
+= link_to 'Back', consumers_path

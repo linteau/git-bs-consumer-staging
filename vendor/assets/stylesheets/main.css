@@ -1,0 +1,36 @@
+		.form-label {
+			position:relative;
+			top:-3px;
+		}
+	input {
+		border: 1px solid #7b7b7b;
+		padding:5px;
+		font-family:Arial,Tahoma,Verdana;
+		font-size:14px;
+		margin-bottom:5px;
+	}
+
+	input:focus{
+	    outline: none;
+	}
+
+	.textbox {
+		background:url('bg-input.png');
+		height:31px;
+	}
+	#error {
+		font-size:11px;
+		color:gray;
+		font-family:Verdana,Arial,Tahoma;
+		display:none;
+		position:absolute;top:495px;left:414px;
+	}
+	.normaltext {
+		font-size:12px;
+		font-family: Tahoma,Arial;
+		color:#bfbfbf;
+	}
+	a {
+		color: #bfbfbf;
+		text-decoration:none;
+	}

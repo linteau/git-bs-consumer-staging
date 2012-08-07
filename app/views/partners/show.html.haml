@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Partner name:
+  = @partner.partner_name
+%p
+  %b Website:
+  = @partner.website
+%p
+  %b Description:
+  = @partner.description
+%p
+  %b Title:
+  = @partner.title
+%p
+  %b Address1:
+  = @partner.address1
+%p
+  %b Address2:
+  = @partner.address2
+%p
+  %b City:
+  = @partner.city
+%p
+  %b State province:
+  = @partner.state_province
+%p
+  %b Postal code:
+  = @partner.postal_code
+%p
+  %b Country:
+  = @partner.country
+%p
+  %b Phone1:
+  = @partner.phone1
+%p
+  %b Phone2:
+  = @partner.phone2
+%p
+  %b Tax:
+  = @partner.tax_id
+
+= link_to 'Edit', edit_partner_path(@partner)
+\|
+= link_to 'Back', partners_path

@@ -1,0 +1,49 @@
+%h1 Listing consumers
+
+%table
+  %tr
+    %th First name
+    %th Middle name
+    %th Last name
+    %th User
+    %th Stripe customer
+    %th Title
+    %th Address1
+    %th Address2
+    %th City
+    %th State province
+    %th Postal code
+    %th Country
+    %th Phone1
+    %th Phone2
+    %th Email1
+    %th Email2
+    %th
+    %th
+    %th
+
+  - @consumers.each do |consumer|
+    %tr
+      %td= consumer.first_name
+      %td= consumer.middle_name
+      %td= consumer.last_name
+      %td= consumer.user_id
+      %td= consumer.stripe_customer_id
+      %td= consumer.title
+      %td= consumer.address1
+      %td= consumer.address2
+      %td= consumer.city
+      %td= consumer.state_province
+      %td= consumer.postal_code
+      %td= consumer.country
+      %td= consumer.phone1
+      %td= consumer.phone2
+      %td= consumer.email1
+      %td= consumer.email2
+      %td= link_to 'Show', consumer
+      %td= link_to 'Edit', edit_consumer_path(consumer)
+      %td= link_to 'Destroy', consumer, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Consumer', new_consumer_path

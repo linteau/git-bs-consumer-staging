@@ -1,0 +1,84 @@
+%p#notice= notice
+
+%p
+  %b Product:
+  = @product.product_id
+%p
+  %b Link:
+  = @product.link
+%p
+  %b Summary:
+  = @product.summary
+%p
+  %b Title:
+  = @product.title
+%p
+  %b Updated:
+  = @product.updated
+%p
+  %b Brand:
+  = @product.brand
+%p
+  %b Color:
+  = @product.color
+%p
+  %b Condition:
+  = @product.condition
+%p
+  %b Gtin:
+  = @product.gtin
+%p
+  %b Image link:
+  = @product.image_link
+%p
+  %b Mpn:
+  = @product.mpn
+%p
+  %b Google product category:
+  = @product.google_product_category
+%p
+  %b Bs google product category:
+  = @product.bs_google_product_category
+%p
+  %b Product type:
+  = @product.product_type
+%p
+  %b Size:
+  = @product.size
+%p
+  %b Gender:
+  = @product.gender
+%p
+  %b Age group:
+  = @product.age_group
+%p
+  %b Item group:
+  = @product.item_group_id
+%p
+  %b Price:
+  = @product.price
+%p
+  %b Sale price:
+  = @product.sale_price
+%p
+  %b Sale price effective date:
+  = @product.sale_price_effective_date
+%p
+  %b Bs ask:
+  = @product.bs_ask
+%p
+  %b Availability:
+  = @product.availability
+%p
+  %b Shipping:
+  = @product.shipping_id
+%p
+  %b Adwords grouping:
+  = @product.adwords_grouping
+%p
+  %b Adwords redirect:
+  = @product.adwords_redirect
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

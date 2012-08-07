@@ -1,0 +1,91 @@
+= form_for @product do |f|
+  -if @product.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :product_id
+    = f.text_field :product_id
+  .field
+    = f.label :partner_id
+    = f.text_field :partner_id
+  .field
+    = f.label :link
+    = f.text_field :link
+  .field
+    = f.label :summary
+    = f.text_area :summary
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :updated
+    = f.datetime_select :updated
+  .field
+    = f.label :brand
+    = f.text_field :brand
+  .field
+    = f.label :color
+    = f.text_field :color
+  .field
+    = f.label :condition
+    = f.text_field :condition
+  .field
+    = f.label :gtin
+    = f.number_field :gtin
+  .field
+    = f.label :image_link
+    = f.text_field :image_link
+  .field
+    = f.label :mpn
+    = f.text_field :mpn
+  .field
+    = f.label :google_product_category
+    = f.text_field :google_product_category
+  .field
+    = f.label :bs_google_product_category
+    = f.text_field :bs_google_product_category
+  .field
+    = f.label :product_type
+    = f.text_field :product_type
+  .field
+    = f.label :size
+    = f.text_field :size
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :age_group
+    = f.text_field :age_group
+  .field
+    = f.label :item_group_id
+    = f.number_field :item_group_id
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :sale_price
+    = f.text_field :sale_price
+  .field
+    = f.label :sale_price_effective_date
+    = f.text_field :sale_price_effective_date
+  .field
+    = f.label :bs_ask
+    = f.text_field :bs_ask
+  .field
+    = f.label :availability
+    = f.text_field :availability
+  .field
+    = f.label :shipping_id
+    = f.number_field :shipping_id
+  .field
+    = f.label :adwords_grouping
+    = f.text_field :adwords_grouping
+  .field
+    = f.label :adwords_redirect
+    = f.text_field :adwords_redirect
+  .actions
+    = f.submit 'Save'

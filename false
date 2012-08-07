@@ -1,0 +1,37 @@
+Plural version of the model detected, using singularized version. Override with --force-plural.
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120803194644_create_products.rb
+[1m[32m      create[0m    app/models/product.rb
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/models/product_spec.rb
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :products
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/products_controller.rb
+[1m[37m      invoke[0m    haml
+[1m[32m      create[0m      app/views/products
+[1m[32m      create[0m      app/views/products/index.html.haml
+[1m[32m      create[0m      app/views/products/edit.html.haml
+[1m[32m      create[0m      app/views/products/show.html.haml
+[1m[32m      create[0m      app/views/products/new.html.haml
+[1m[32m      create[0m      app/views/products/_form.html.haml
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/controllers/products_controller_spec.rb
+[1m[32m      create[0m      spec/views/products/edit.html.haml_spec.rb
+[1m[32m      create[0m      spec/views/products/index.html.haml_spec.rb
+[1m[32m      create[0m      spec/views/products/new.html.haml_spec.rb
+[1m[32m      create[0m      spec/views/products/show.html.haml_spec.rb
+[1m[32m      create[0m      spec/routing/products_routing_spec.rb
+[1m[37m      invoke[0m      rspec
+[1m[32m      create[0m        spec/requests/products_spec.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/products_helper.rb
+[1m[37m      invoke[0m      rspec
+[1m[32m      create[0m        spec/helpers/products_helper_spec.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/products.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/products.css.scss
+[1m[37m      invoke[0m  scss
+[1m[34m   identical[0m    app/assets/stylesheets/scaffolds.css.scss

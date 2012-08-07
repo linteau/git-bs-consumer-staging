@@ -1,0 +1,69 @@
+%h1 Listing products
+
+%table
+  %tr
+    %th Product
+    %th Link
+    %th Summary
+    %th Title
+    %th Updated
+    %th Brand
+    %th Color
+    %th Condition
+    %th Gtin
+    %th Image link
+    %th Mpn
+    %th Google product category
+    %th Bs google product category
+    %th Product type
+    %th Size
+    %th Gender
+    %th Age group
+    %th Item group
+    %th Price
+    %th Sale price
+    %th Sale price effective date
+    %th Bs ask
+    %th Availability
+    %th Shipping
+    %th Adwords grouping
+    %th Adwords redirect
+    %th
+    %th
+    %th
+
+  - @products.each do |product|
+    %tr
+      %td= product.product_id
+      %td= product.link
+      %td= product.summary
+      %td= product.title
+      %td= product.updated
+      %td= product.brand
+      %td= product.color
+      %td= product.condition
+      %td= product.gtin
+      %td= product.image_link
+      %td= product.mpn
+      %td= product.google_product_category
+      %td= product.bs_google_product_category
+      %td= product.product_type
+      %td= product.size
+      %td= product.gender
+      %td= product.age_group
+      %td= product.item_group_id
+      %td= product.price
+      %td= product.sale_price
+      %td= product.sale_price_effective_date
+      %td= product.bs_ask
+      %td= product.availability
+      %td= product.shipping_id
+      %td= product.adwords_grouping
+      %td= product.adwords_redirect
+      %td= link_to 'Show', product
+      %td= link_to 'Edit', edit_product_path(product)
+      %td= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Product', new_product_path
