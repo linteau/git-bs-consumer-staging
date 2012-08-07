@@ -1,27 +1,65 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>BUYSTAND.™ - Consumer</title>
-  <%= stylesheet_link_tag 'web_app_theme' %>
+  <title>BUYSTAND</title>
+  <style type="text/css">
+	  .form-label {
+		  position:relative;
+		  top:-3px;
+	  }
+
+	  input {
+		  border: 1px solid #7b7b7b;
+		  padding:5px;
+		  font-family:Arial,Tahoma,Verdana;
+		  font-size:14px;
+		  margin-bottom:5px;
+	  }
+
+	  input:focus{
+		  outline: none;
+	  }
+
+	  .textbox {
+		  background:url('http://cdn.buystand.com/bg-input.png');
+		  height:31px;
+	  }
+
+	  #error {
+		  font-size:11px;
+		  color:gray;
+		  font-family:Verdana,Arial,Tahoma;
+		  display:none;
+		  position:absolute;top:495px;left:414px;
+	  }
+  </style>
+
+  <%= stylesheet_link_tag "main" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.ez-bg-resize" %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-<div id="container">
-  <div id="header">
-	<h1><a href="/">BUYSTAND.™ - Consumer</a></h1>
-	<div id="main-navigation">
-	  <ul class="wat-cf"></ul>
-	</div>
-  </div>
+
+<body style="margin:0px;padding:0px;">
+  <script>
+	$("document").ready(function()
+	{
+		$("body").ezBgResize(
+		{
+			img     : "http://cdn.buystand.com/bg/bg-1.jpg",
+			opacity : 1,
+			center  : true
+		});
+	});
+  </script>
+
+  <br><br><br><br><br><br>
+
   <div id="box">
 	<%= yield %>
   </div>
-  <div id="footer">
-	<div class="block">
-	  <p>Copyright &copy; <%= Time.now.year %> BUYSTAND.™.</p>
-	</div>
-  </div>
-</div>
+
 </body>
+<script language='JavaScript'>
+	$().ready(function() { $('#content').fadeIn(1000); });
+</script>
 </html>

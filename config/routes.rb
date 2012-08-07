@@ -1,5 +1,9 @@
 BuyStandConsumer::Application.routes.draw do
-  resources :productfeeds
+  resources :products
+
+  resources :partners
+
+  resources :consumers
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

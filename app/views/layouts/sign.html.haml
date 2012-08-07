@@ -1,20 +1,68 @@
 !!!
 %html
   %head
-    %title BUYSTAND.™ - Consumer
-    = stylesheet_link_tag 'web_app_theme'
+    %title BUYSTAND
     = javascript_include_tag "application"
+    = javascript_include_tag "jquery.ez-bg-resize"
+    = stylesheet_link_tag 'main'
     = csrf_meta_tag
-  %body
-    #container
-      #header
-        %h1
-          %a{:href => "/"} BUYSTAND.™ - Consumer
-        #main-navigation
-          %ul.wat-cf
-      #box
-        = yield
-      #footer
-        .block
-          %p
-            Copyright © #{Time.now.year} BUYSTAND.™.
+  %body{:style => "margin:0px;padding:0px;"}
+    :javascript
+      $(document).ready(function() {
+      	$("body").ezBgResize({
+      		img     : image_tag("bg/bg-1.jpg"), // Relative path example.  You could also use an absolute url (http://...).
+      		opacity : 1, // Opacity. 1 = 100%.  This is optional.
+      		center  : true // Boolean (true or false). This is optional. Default is true.
+      	});
+      });
+
+      $().ready(function()
+      {
+        $('#content').fadeIn(1000);
+      });
+      %br
+      %br
+        %br
+          %br
+            %br
+              %br
+                %form#signupform{:onSubmit => "doSubmit();return false;"}
+                  #content{:style => "display:none;width:754px;height:524px;background-image:url('message.png');"}
+                    #form_footer{:style => "position:relative;"}
+                      = link_to image_tag('submit_button.gif', :style => "padding-top:14px;border-width:0px;margin:0px;position:absolute;top:395px;left:409px;")
+                      #error Oops! Please fill all fields
+                    #formdiv{:style => "padding-top:266px;padding-left:413px;color:white;"}
+                      = image_tag("label-email.png")
+                        %br
+                          %input#email.textbox{:name => "email", :style => "width:70%;", :type => "text"}
+                            %br
+                              image_tag("label-password.png")
+                                %br
+                                  %input#password.textbox{:name => "password", :style => "width:70%;", :type => "password"}
+                                    %br
+                                      %span.normaltext
+                                        %input{:type => "checkbox"} Remember me
+                                      %br
+                                        %div{:style => "padding-top:55px;font-size:11px;color:gray;font-family:Tahoma,Arial;font-size:12px;"}
+                                          %a{:href => "/users/sign_up"} Sign up
+                                          \ | 
+                                          %a{:href => "/users/password/new"} Forgot your password?
+                                          %br
+                                            %a{:href => "/users/auth/facebook"}
+                                              = link_to image_tag("fb-login-button.png", :style => "padding-top:10px;")
+                    #formthanksdiv{:style => "display:none;padding-top:270px;padding-left:415px;color:white;padding-right:100px;"}
+                      %font{:style => "font-family:Arial,Tahoma;font-size:12px;color:#e1ecff;"}
+                        %font{:size => "2"}
+                          Thank You for your interest!
+                        %br
+                          %br
+                            For earlier access, please invite your
+                            friends to become a supporter.
+                            %br
+                              %br
+                                Here is your link to share with friends.
+                                (tiny url link)
+                                (Twitter) (FB) (G+) (Pinterest)
+                                %br
+                                  %br
+                                    When 20 of your friends sign up we will send you this awesome limited edition B$ shirt.

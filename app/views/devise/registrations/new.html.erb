@@ -1,18 +1,30 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+	<%= devise_error_messages! %>
+	<div id='content' style="display:none;width:754px;height:524px;background-image:url('/assets/message.png');">
+	  <div style='position:relative;' id='form_footer'>
+		<%= image_submit_tag("submit_button.gif", :style => 'padding-top:14px;border-width:0px;margin:0px;position:absolute;top:415px;left:409px;') %>
+		<!--<input type=image src='images/submit_button.gif' style='padding-top:14px;border-width:0px;margin:0px;position:absolute;top:395px;left:409px;'>-->
+		<div id='error'>Oops! Please fill all fields</div>
+	  </div>
+	  <div id='formdiv' style='padding-top:266px;padding-left:413px;color:white;'>
+		<%= image_tag("label-email.png", :class => 'form-label') %>
+		<!--<img src='images/label-email.png' class='form-label'>-->
+		<%= f.email_field :email, :style => "width:70%", :class => "textbox" %>
+		<!--<input type=text id='email' name='email' style='width:70%;' class='textbox'>-->
+		<br>
+		<%= image_tag("label-password.png", :class => 'form-label') %>
+		<!--<img src='images/label-password.png' class='form-label'>-->
+		<!--<input  id='password' name='password' type=password style='width:70%;' class='textbox'>-->
+		<%= f.password_field :password, :style => "width:70%", :class => "textbox" %>
+		<br>
+		<%= image_tag("label-password.png", :class => 'form-label') %>
+		<!--<img src='images/label-password.png' class='form-label'>-->
+		<!--<input  id='password' name='password' type=password style='width:70%;' class='textbox'>-->
+		<%= f.password_field :password_confirmation, :style => "width:70%", :class => "textbox" %>
+		<div  style="padding-top:55px;font-size:11px;color:gray;font-family:Tahoma,Arial;font-size:12px;">
+		  <a href='/users/sign_in'>Sign in</a>
+		  &nbsp;|&nbsp;
+		  <a href='/users/password/new'>Forgot your password?</a>
+		</div>
+	  </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

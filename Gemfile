@@ -11,8 +11,9 @@ gem 'devise-encryptable'
 gem 'kaminari'
 gem 'omniauth-facebook'
 
-gem 'haml'
-gem 'haml-rails'
+# Stripe
+gem 'omniauth-stripe-platform'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development, :test do
 	gem 'capybara'

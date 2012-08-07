@@ -11,15 +11,78 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731202717) do
+ActiveRecord::Schema.define(:version => 20120807185432) do
 
-  create_table "productfeeds", :force => true do |t|
+  create_table "consumers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.integer  "user_id"
+    t.integer  "stripe_customer_id"
+    t.string   "title"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state_province"
+    t.string   "postal_code"
+    t.string   "country"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "email1"
+    t.string   "email2"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "partners", :force => true do |t|
+    t.string   "partner_name"
+    t.string   "website"
+    t.text     "description"
+    t.string   "title"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state_province"
+    t.string   "postal_code"
+    t.string   "country"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "tax_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "product_id"
     t.string   "link"
     t.text     "summary"
     t.string   "title"
     t.datetime "updated"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "brand"
+    t.string   "color"
+    t.string   "condition"
+    t.integer  "gtin"
+    t.string   "image_link"
+    t.string   "mpn"
+    t.string   "google_product_category"
+    t.string   "bs_google_product_category"
+    t.string   "product_type"
+    t.string   "size"
+    t.string   "gender"
+    t.string   "age_group"
+    t.integer  "item_group_id"
+    t.decimal  "price"
+    t.decimal  "sale_price"
+    t.string   "sale_price_effective_date"
+    t.decimal  "bs_ask"
+    t.string   "availability"
+    t.integer  "shipping_id"
+    t.string   "adwords_grouping"
+    t.string   "adwords_redirect"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "partner_id"
+    t.datetime "bs_sale_date"
   end
 
   create_table "users", :force => true do |t|
