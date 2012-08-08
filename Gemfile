@@ -16,7 +16,8 @@ gem 'omniauth-stripe-platform'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development, :test do
-	gem 'capybara'
+	gem 'tddium'
+       gem 'capybara'
 	gem 'rspec-rails'
 	gem 'hpricot'
 	gem 'ruby_parser'
