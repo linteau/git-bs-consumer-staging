@@ -21,7 +21,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'hpricot'
 	gem 'ruby_parser'
-	gem 'web-app-theme', git: 'git://github.com/pilu/web-app-theme.git'
+	gem 'web-app-theme', :git => 'git://github.com/pilu/web-app-theme.git'
 end
 # Gems used only for assets and not required
 # in production environments by default.
